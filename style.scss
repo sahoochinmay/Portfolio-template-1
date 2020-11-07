@@ -1,0 +1,86 @@
+// font family
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+// bold font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+////////////////////////////////////////////////
+//////////////  variables //////////////////////
+////////////////////////////////////////////////
+$bgcolor: black;
+$textcolor: white;
+$color: #f9004d;
+$fontfamily: "Montserrat", sans-serif;
+////////////////////////////////////////////////
+//////////////    mixin     //////////////////////
+////////////////////////////////////////////////
+@mixin border {
+  border: 1px solid pink;
+}
+
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-family: $fontfamily;
+}
+
+/*----Header Section---*/
+#header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.7)),
+    url(images/headerbg.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  // Navbar section
+  nav {
+    padding-top: 1rem;
+    .navbar-brand {
+      font-size: 30px;
+      font-weight: bolder;
+      color: $color;
+    }
+    .navbar-nav {
+      .nav-item {
+        margin: 0 0.5rem;
+
+        .nav-link {
+          position: relative;
+          padding-left: 0;
+          padding-right: 0;
+          color: white !important;
+          &::after {
+            content: "";
+            width: 0%;
+            height: 0.13rem;
+            position: absolute;
+            left: 0;
+            top: 85%;
+            background: $color;
+            transition: 0.7s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  //   Home section
+  #home {
+    height: 100vh;
+    width: 100%;
+    padding-top: 60px;
+
+    #name {
+      font-weight: 900;
+    }
+    span {
+      color: $color;
+      font-weight: bolder;
+      font-size: 55px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*----Header Section---*/
+#header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.04)), to(rgba(0, 0, 0, 0.7))), url(images/headerbg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.7)), url(images/headerbg.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+
+#header nav {
+  padding-top: 1rem;
+}
+
+#header nav .navbar-brand {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #f9004d;
+}
+
+#header nav .navbar-nav .nav-item {
+  margin: 0 0.5rem;
+}
+
+#header nav .navbar-nav .nav-item .nav-link {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  color: white !important;
+}
+
+#header nav .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  width: 0%;
+  height: 0.13rem;
+  position: absolute;
+  left: 0;
+  top: 85%;
+  background: #f9004d;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+#header nav .navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+#header #home {
+  height: 100vh;
+  width: 100%;
+  padding-top: 60px;
+}
+
+#header #home #name {
+  font-weight: 900;
+}
+
+#header #home span {
+  color: #f9004d;
+  font-weight: bolder;
+  font-size: 55px;
+}
+/*# sourceMappingURL=style.css.map */
