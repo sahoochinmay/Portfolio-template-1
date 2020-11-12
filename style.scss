@@ -7,19 +7,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 ////////////////////////////////////////////////
 //////////////  variables //////////////////////
 ////////////////////////////////////////////////
 $bgcolor: black;
+$secondbg: #191919;
 $textcolor: white;
 $color: #f9004d;
+$linearcolor: linear-gradient(90deg, #f61b10, #ef0963);
 $fontfamily: "Montserrat", sans-serif;
 ////////////////////////////////////////////////
 //////////////    mixin     //////////////////////
 ////////////////////////////////////////////////
 @mixin border {
   border: 1px solid pink;
+}
+@mixin heighlight {
+  background: $linearcolor;
+  padding: 5px 15px;
 }
 
 body {
@@ -28,7 +35,9 @@ body {
   font-family: $fontfamily;
 }
 
-/*----Header Section---*/
+////////////////////////////////////////////////
+////////////// Header Section  /////////////////
+////////////////////////////////////////////////
 #header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.7)),
     url(images/headerbg.jpg);
@@ -50,7 +59,7 @@ body {
           position: relative;
           padding-left: 0;
           padding-right: 0;
-          color: white !important;
+          color: $textcolor !important;
           &::after {
             content: "";
             width: 0%;
@@ -83,4 +92,322 @@ body {
       font-size: 55px;
     }
   }
+}
+
+/*---Social Section---*/
+#social {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  // background: yellow;
+  z-index: 97;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .socialIcons {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+
+    i {
+      font-size: 1.5rem;
+      margin: 0.3rem;
+      color: white;
+      transition: 0.2s linear;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.19);
+      }
+    }
+    // div {
+    //   height: 5px;
+    //   width: 100px;
+    //   background-color: $color;
+    //   transform: rotate(90deg);
+    //   transform-origin: 20% 60%;
+    // }
+  }
+}
+
+////////////////////////////////////////////////
+////////////// About secion   //////////////////////
+////////////////////////////////////////////////
+.about {
+  background-color: $secondbg;
+  // padding: 100px 0 0 0;
+  .aboutText {
+    h1 {
+      font-weight: 600;
+      span {
+        @include heighlight();
+      }
+    }
+    p {
+      opacity: 0.8;
+      a {
+        color: $color;
+      }
+    }
+  }
+}
+.tabs {
+  position: relative;
+  // min-height: ;
+  height: 400px;
+  clear: both;
+  // margin: 25px 0;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  // margin-top: ;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  &:hover::after {
+    width: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 115%;
+    background: rgba(124, 121, 121, 0.89);
+    width: 35%;
+    height: 0.13rem;
+    transition: 0.4s;
+  }
+}
+.tab [type="radio"] {
+  opacity: 0;
+}
+.content {
+  // margin-top: 1.5rem;
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  // border: 1px solid #ccc;
+  overflow: hidden;
+  p {
+    opacity: 0.8 !important;
+  }
+  @media (max-width: 500px) {
+    top: 40px;
+  }
+}
+
+.content > * {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+}
+
+[type="radio"]:focus ~ label {
+  // outline: 2px solid blue;
+}
+[type="radio"]:checked ~ label {
+  color: $color;
+  &::after {
+    width: 100%;
+    background: $color;
+  }
+  z-index: 2;
+}
+[type="radio"]:checked ~ label ~ .content {
+  z-index: 1;
+}
+[type="radio"]:checked ~ label ~ .content > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+////////////////////////////////////////////////
+////////////// My skil secion   //////////////////////
+////////////////////////////////////////////////
+/*---Skills Section---*/
+#skills {
+  padding: 4rem 0;
+
+  .skills-heading {
+    p {
+      text-transform: capitalize;
+      opacity: 0.8;
+    }
+
+    h2 {
+      font-weight: bold;
+      letter-spacing: 0.3rem;
+      position: relative;
+      display: inline-block;
+
+      span {
+        @include heighlight();
+      }
+    }
+  }
+
+  .skill {
+    .skills {
+      padding: 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      transition: 0.4s linear;
+
+      &:hover {
+        box-shadow: 0 6px 16px $color;
+        cursor: pointer;
+      }
+
+      .progress {
+        border-radius: 2rem;
+
+        .progress-bar {
+          background: #f9004d;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
+////////////// Service Section  /////////////////
+////////////////////////////////////////////////
+#services {
+  padding: 5rem 0;
+  background: $secondbg;
+  .services-heading {
+    p {
+      text-transform: capitalize;
+    }
+
+    h2 {
+      font-weight: bold;
+      letter-spacing: 0.3rem;
+      position: relative;
+      display: inline-block;
+
+      span {
+        background: $color;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  }
+
+  .service-container {
+    text-align: center;
+
+    padding: 1rem 0.4rem;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    transition: 0.4s linear;
+    border-radius: 2rem;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 0%;
+      height: 0%;
+      border-radius: 2rem;
+      background: $linearcolor;
+      transition: 0.4s linear;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      height: 100%;
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover .logo {
+      background: white;
+    }
+
+    &:hover i {
+      color: $color;
+    }
+
+    &:hover p {
+      color: white;
+    }
+
+    .logo {
+      margin: 2rem 0;
+      background: $color;
+      display: inline-block;
+      border-radius: 50%;
+      transition: 0.4s linear;
+
+      i {
+        font-size: 2rem;
+        padding: 1.5rem;
+        transition: 0.4s linear;
+      }
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.12rem;
+    }
+
+    p {
+      color: grey;
+      margin: 1.4rem 0;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////
+////////////// Progress bar indicatior   Section  /////////////////
+//////////////////////////////////////////////////////////////////
+.progressbar-container {
+  width: 100%;
+  height: 8px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 98;
+}
+
+.progress-bar-indicator {
+  height: 8px;
+  background: $color;
+  width: 0%;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }

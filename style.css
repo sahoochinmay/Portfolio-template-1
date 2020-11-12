@@ -5,6 +5,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-/*----Header Section---*/
 #header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.04)), to(rgba(0, 0, 0, 0.7))), url(images/headerbg.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.7)), url(images/headerbg.jpg);
@@ -72,5 +72,333 @@ body {
   color: #f9004d;
   font-weight: bolder;
   font-size: 55px;
+}
+
+/*---Social Section---*/
+#social {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  z-index: 97;
+  color: #f9004d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#social .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 2rem;
+}
+
+#social .socialIcons i {
+  font-size: 1.5rem;
+  margin: 0.3rem;
+  color: white;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+#social .socialIcons i:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.19);
+          transform: scale(1.19);
+}
+
+.about {
+  background-color: #191919;
+}
+
+.about .aboutText h1 {
+  font-weight: 600;
+}
+
+.about .aboutText h1 span {
+  background: -webkit-gradient(linear, left top, right top, from(#f61b10), to(#ef0963));
+  background: linear-gradient(90deg, #f61b10, #ef0963);
+  padding: 5px 15px;
+}
+
+.about .aboutText p {
+  opacity: 0.8;
+}
+
+.about .aboutText p a {
+  color: #f9004d;
+}
+
+.tabs {
+  position: relative;
+  height: 400px;
+  clear: both;
+}
+
+.tab {
+  float: left;
+}
+
+.tab label {
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab label:hover::after {
+  width: 100%;
+}
+
+.tab label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 115%;
+  background: rgba(124, 121, 121, 0.89);
+  width: 35%;
+  height: 0.13rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.tab [type="radio"] {
+  opacity: 0;
+}
+
+.content {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.content p {
+  opacity: 0.8 !important;
+}
+
+@media (max-width: 500px) {
+  .content {
+    top: 40px;
+  }
+}
+
+.content > * {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+[type="radio"]:checked ~ label {
+  color: #f9004d;
+  z-index: 2;
+}
+
+[type="radio"]:checked ~ label::after {
+  width: 100%;
+  background: #f9004d;
+}
+
+[type="radio"]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+[type="radio"]:checked ~ label ~ .content > * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/*---Skills Section---*/
+#skills {
+  padding: 4rem 0;
+}
+
+#skills .skills-heading p {
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+#skills .skills-heading h2 {
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+#skills .skills-heading h2 span {
+  background: -webkit-gradient(linear, left top, right top, from(#f61b10), to(#ef0963));
+  background: linear-gradient(90deg, #f61b10, #ef0963);
+  padding: 5px 15px;
+}
+
+#skills .skill .skills {
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+
+#skills .skill .skills:hover {
+  -webkit-box-shadow: 0 6px 16px #f9004d;
+          box-shadow: 0 6px 16px #f9004d;
+  cursor: pointer;
+}
+
+#skills .skill .skills .progress {
+  border-radius: 2rem;
+}
+
+#skills .skill .skills .progress .progress-bar {
+  background: #f9004d;
+}
+
+#services {
+  padding: 5rem 0;
+  background: #191919;
+}
+
+#services .services-heading p {
+  text-transform: capitalize;
+}
+
+#services .services-heading h2 {
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+#services .services-heading h2 span {
+  background: #f9004d;
+  padding: 0.6rem 1.2rem;
+}
+
+#services .service-container {
+  text-align: center;
+  padding: 1rem 0.4rem;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  border-radius: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+#services .service-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 0%;
+  border-radius: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#f61b10), to(#ef0963));
+  background: linear-gradient(90deg, #f61b10, #ef0963);
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  z-index: -1;
+}
+
+#services .service-container:hover::before {
+  height: 100%;
+  width: 100%;
+}
+
+#services .service-container:hover {
+  cursor: pointer;
+}
+
+#services .service-container:hover .logo {
+  background: white;
+}
+
+#services .service-container:hover i {
+  color: #f9004d;
+}
+
+#services .service-container:hover p {
+  color: white;
+}
+
+#services .service-container .logo {
+  margin: 2rem 0;
+  background: #f9004d;
+  display: inline-block;
+  border-radius: 50%;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+
+#services .service-container .logo i {
+  font-size: 2rem;
+  padding: 1.5rem;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+
+#services .service-container h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.12rem;
+}
+
+#services .service-container p {
+  color: grey;
+  margin: 1.4rem 0;
+}
+
+.progressbar-container {
+  width: 100%;
+  height: 8px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 98;
+}
+
+.progress-bar-indicator {
+  height: 8px;
+  background: #f9004d;
+  width: 0%;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 /*# sourceMappingURL=style.css.map */
