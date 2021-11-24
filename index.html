@@ -31,7 +31,7 @@
 
     <!-- Navbar -->
     <section id="header">
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg  navbar-dark">
         <div class="container">
           <a class="navbar-brand" href="#">My - Portfolio</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -69,7 +69,7 @@
       <section id="home">
         <div class="container pt-5">
           <h4 class="text-muted pt-5">WELCOME TO MY WORLD</h4>
-          <h1 id="name">Hi, I’m Chinmay</h1>
+          <h1 id="name">Hi, I’m Sahoochinmay</h1>
           <h1><span id="blink"></span></h1>
           <h3>based in USA.</h3>
         </div>
@@ -327,41 +327,286 @@
         </div>
       </div>
     </section>
+    <!-- My Projects -->
+    <section id="mywork">
+      <div class="container">
+        <div class="col-12 text-center text-uppercase mywork-heading mb-5">
+          <h2 class="mb-5">My <span class="mb-5">Projects</span> </h2>
+          <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptates delectus ipsa sit minima cupiditate quia quasi totam!
+            delectus ipsa sit minima cupiditate quia ipsa sit minima cupiditate.
+          </p>
+        </div>
+        <div class="col-12">
+          <ul class="d-flex mb-5 flex-wrap">
+            <li class="list active" data-filter="All">All</li>
+            <li class="list" data-filter="Recent">Recent</li>
+            <li class="list" data-filter="Popular">Popular</li>
+            <li class="list" data-filter="Upcoming">Upcoming</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 main Recent">
+            <div class="image">
+              <img class="img-fluid" src="images/work1.jpg" alt="" srcset="">
+              <div class="workdetails">
+                <h5>Creative Design</h5>
+              </div>
+            </div>
+          </div>
 
 
+          <div class="col-md-6 col-lg-4 mb-4 main Recent">
+            <div class="image">
+              <img class="img-fluid" src="images/work2.jpg" alt="" srcset="">
+              <div class="workdetails">
+                <h5>Web Design</h5>
+              </div>
+            </div>
+          </div>
 
 
-    <script>
-      //Get the button
-      var mybutton = document.getElementById("myBtn");
-      
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function() {scrollFunction()};
-      
-      function scrollFunction() {
-        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      // console.log(mybutton.style.display)
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-   </script>
-      
-      
+          <div class="col-md-6 col-lg-4 mb-4 main Popular">
+            <div class="image">
+              <img class="img-fluid" src="images/work3.jpg" alt="" srcset="">
+              <div class="workdetails">
+
+                <h5>UI Design</h5>
+              </div>
 
 
-    <!-- Progress indicatior -->
-    <section>
-      <div class="progressbar-container">
-        <div class="progress-bar-indicator" id="myBar"></div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 main Popular">
+            <div class="image">
+              <img class="img-fluid" src="images/work4.jpg" alt="" srcset="">
+              <div class="workdetails">
+                <h5>Wordpress</h5>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 main Upcoming">
+            <div class="image">
+              <img class="img-fluid" src="images/work5.jpg" alt="" srcset="">
+              <div class="workdetails">
+                <h5>Blogging</h5>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 main Upcoming">
+            <div class="image">
+              <img class="img-fluid" src="images/work6.jpg" alt="" srcset="">
+
+              <div class="workdetails">
+                <h5>Responsive Design</h5>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial_section pt-4 pb-5">
+      <section class="team-section text-center my-5 container">
+        <!-- Section heading -->
+        <h2 class="h1-responsive heading font-weight-bold my-5"><span>Testimonials </span> </h2>
+        <!-- Section description -->
+        <p class="dark-grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
+          eum porro a pariatur veniam.</p>
+
+        <!--Grid row-->
+        <div class="row text-center">
+
+          <!--Grid column-->
+          <div class="col-md-4 mb-md-0 mb-5">
+
+            <div class="testimonial">
+              <!--Avatar-->
+              <div class="avatar mx-auto">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg"
+                  class="rounded-circle z-depth-1 img-fluid">
+              </div>
+              <!--Content-->
+              <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
+              <h6 class="font-weight-bold blue-text my-3">Web Designer</h6>
+              <p class="font-weight-normal dark-grey-text">
+                <i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+              </p>
+              <!--Review-->
+              <div class="orange-text">
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star-half-alt"> </i>
+              </div>
+            </div>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-4 mb-md-0 mb-5">
+
+            <div class="testimonial">
+              <!--Avatar-->
+              <div class="avatar mx-auto">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg"
+                  class="rounded-circle z-depth-1 img-fluid">
+              </div>
+              <!--Content-->
+              <h4 class="font-weight-bold dark-grey-text mt-4">John Doe</h4>
+              <h6 class="font-weight-bold blue-text my-3">Web Developer</h6>
+              <p class="font-weight-normal dark-grey-text">
+                <i class="fas fa-quote-left pr-2"></i>Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                corporis suscipit laboriosam, nisi ut aliquid commodi.
+              </p>
+              <!--Review-->
+              <div class="orange-text">
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+              </div>
+            </div>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-4">
+
+            <div class="testimonial">
+              <!--Avatar-->
+              <div class="avatar mx-auto">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg"
+                  class="rounded-circle z-depth-1 img-fluid">
+              </div>
+              <!--Content-->
+              <h4 class="font-weight-bold dark-grey-text mt-4">Maria Kate</h4>
+              <h6 class="font-weight-bold blue-text my-3">Photographer</h6>
+              <p class="font-weight-normal dark-grey-text">
+                <i class="fas fa-quote-left pr-2"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti.
+              </p>
+              <!--Review-->
+              <div class="orange-text">
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="fas fa-star"> </i>
+                <i class="far fa-star"> </i>
+              </div>
+            </div>
+
+          </div>
+      </section>
+
+      <!--Grid column-->
+
   </div>
+  <!--Grid row-->
+
+  </section>
+
+
+
+  <!-- Contact section
+  <section class="container ">
+    <div class="row justify-content-center">
+
+      <div class="contactform col-8 ">
+        <h3 class="text-center heading">Contact  <span>
+           Me
+        </span></h3>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloremque, soluta quos optio laboriosam corrupti sint? Eligendi,
+          tempore mollitia.</p>
+
+        <form action="" method="post">
+
+          <div class="nameemail d-flex justify-content-between">
+            <input type="text" name="cname" id="" placeholder="Your Name" required>
+
+            <input type="email" name="cemail" id="" placeholder="E-mail Address" required>
+
+          </div>
+          <div class="subnumber d-flex justify-content-between">
+            <input type="text" name="subject" id="" placeholder="Subject" required>
+
+            <input type="text" name="number" id="" placeholder="Phone Number(Optional)">
+
+          </div>
+
+          <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+
+          <a href="#">Submit <i class="fas fa-paper-plane ml-2"></i> </a>
+        </form>
+
+      </div>
+
+    </div>
+  </section> -->
+
+
+
+
+
+
+
+
+  <!-- GO to top button -->
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // console.log(mybutton.style.display)
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+
+
+  <!-- Progress indicatior -->
+  <section>
+    <div class="progressbar-container">
+      <div class="progress-bar-indicator" id="myBar"></div>
+    </div>
+    </div>
   </section>
   <!-- Progress on scrolling -->
   <script>
@@ -387,6 +632,34 @@
     });
   </script>
 
+  <!-- Filter -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.list').click(function () {
+        const value = $(this).attr('data-filter');
+        if (value == 'All') {
+          $('.main').show('1000');
+        }
+
+        else {
+          $('.main').not('.' + value).hide('1000');
+          $('.main').filter('.' + value).show('1000');
+        }
+      })
+
+      //add active class on selected item
+
+      $('.list').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+      })
+    }
+
+
+    )
+  </script>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper.js -->

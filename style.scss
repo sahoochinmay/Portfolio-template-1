@@ -374,6 +374,127 @@ body {
   }
 }
 
+////////////////////////////////////////////////
+////////////// Project Section  /////////////////
+////////////////////////////////////////////////
+#mywork {
+  padding: 5rem 0;
+  ul {
+    padding-left: 0;
+    background: rgba(255, 255, 255, 0.08);
+
+    li {
+      list-style: none;
+      padding: 0.6rem 1.2rem;
+
+      &.active {
+        background: $color;
+      }
+
+      &:hover {
+        background: $color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .mywork-heading {
+    p {
+      text-transform: capitalize;
+    }
+
+    h2 {
+      font-weight: bold;
+      letter-spacing: 0.3rem;
+      position: relative;
+      display: inline-block;
+      span {
+        background: $color;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  }
+
+  .main {
+    .image {
+      overflow: hidden;
+      position: relative;
+      border-radius: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      padding: 0.1rem;
+
+      &:hover {
+        box-shadow: 0 6px 16px rgba(25, 25, 25, 0.9);
+        border: 2px solid rgba(255, 255, 255, 0.38);
+      }
+
+      &:hover .workdetails {
+        animation: haha 0.5s forwards linear;
+        cursor: pointer;
+      }
+
+      @keyframes haha {
+        0% {
+          opacity: 0;
+        }
+
+        90% {
+          top: 80%;
+          visibility: visible;
+        }
+
+        100% {
+          top: 70%;
+          visibility: visible;
+        }
+      }
+
+      .workdetails {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        padding: 0.6rem;
+        text-align: center;
+        transition: 0.4s;
+        background: $color;
+        visibility: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.08);
+      }
+
+      &:hover img {
+        transform: scale(1.2);
+        filter: blur(0.1rem);
+        cursor: pointer;
+      }
+
+      img {
+        transition: 0.4s;
+      }
+    }
+  }
+}
+////////////////////////////////////////////////
+////////////// Testimonial  Section  /////////////////
+////////////////////////////////////////////////
+.testimonial_section{
+  background: $secondbg;
+  .heading{
+    span{
+      @include heighlight();
+    }
+  }
+}
+////////////////////////////////////////////////
+////////////// Contact me  Section  /////////////////
+////////////////////////////////////////////////
+
+.heading{
+  span{
+    @include heighlight();
+  }
+}
 //////////////////////////////////////////////////////////////////
 ////////////// Progress bar indicatior   Section  /////////////////
 //////////////////////////////////////////////////////////////////
@@ -411,3 +532,4 @@ body {
 #myBtn:hover {
   background-color: #555;
 }
+// contact section
